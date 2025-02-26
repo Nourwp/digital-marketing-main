@@ -62,7 +62,7 @@ export default function Home() {
     <div
       className="overflow-clip 
       inset-0 
-      -z-10 h-full w-full bg-[#fafafa]
+      -z-10 h-full w-full bg-[#000000]
       bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),
       linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
       bg-[size:14px_24px]"
@@ -71,7 +71,7 @@ export default function Home() {
   name="top"
   className="overflow-hidden rounded-[6px] top-5 md:mx-auto z-50 
   xl:w-4/5 2xl:w-[68%] flex items-center 
-  justify-between py-2 px-2 md:px-4 mx-5 bg-black"
+  justify-between py-2 px-2 md:px-4 mx-5 bg-"
 >
   <Link href={"/"}>
     <Image
@@ -156,7 +156,7 @@ className="hover:text-[#FFD700]"
           </h1>
           <p
             className="md:text-center
-           text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500"
+           text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-300"
           >
             Schedule a call with us to discuss your project and get a quote in
             minutes
@@ -170,63 +170,74 @@ className="hover:text-[#FFD700]"
                   gap-x-4
                    "
           >
-            <Link
-              href="/meeting"
-              className="py-3 
-            px-10
-            md:px-16
-      md:text-xl
-      hover:bg-[#fabc3f] 
-      rounded-[6px]
-      border-2 
-      border-black 
-      dark:border-white 
-       bg-[#121212] 
-       text-white 
-       transition 
-       duration-200 
-       hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
-            >
-              Book a Call
-            </Link>
-            <Link
-              href={"/showcase"}
-              className="
-              bg-white
-   py-3 
-   px-10
-   md:px-16
-      md:text-xl
-        border-4
-        border-black
-        rounded-[6px]
-        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
-            >
-              Showcase
-            </Link>
+<Link
+  href="/meeting"
+  className="
+    py-3 
+    px-10
+    md:px-16
+    md:text-xl
+    bg-gray-800 /* لون الزر الأساسي */
+    text-white
+    rounded-[6px]
+    border-2 
+    border-[#fabc3f] /* لون الإطار */
+    transition 
+    duration-200 
+    hover:bg-[#ffcc4d] /* لون الزر عند التمرير */
+    hover:text-black /* تغيير لون النص عند التمرير */
+    hover:shadow-lg 
+    hover:shadow-[#fabc3f] 
+  "
+>
+  Book a Call
+</Link>
+<Link
+  href={"/showcase"}
+  className="
+    bg-gray-200 /* خلفية رمادية فاتحة */
+    py-3 
+    px-10
+    md:px-16
+    md:text-xl
+    text-black
+    border-4
+    border-[#fabc3f] /* لون الإطار */
+    rounded-[6px]
+    transition 
+    duration-200
+    hover:bg-[#fabc3f] /* تغيير لون الخلفية عند التمرير */
+    hover:text-black /* تغيير لون النص عند التمرير */
+    hover:shadow-lg 
+    hover:shadow-[#fabc3f] /* تأثير ظل ذهبي عند التمرير */
+  "
+>
+  Showcase
+</Link>
+
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center md:mx-auto mt-10 md:mt-16">
   <BoxReveal boxColor={"#fabc3f"} duration={0.5}>
-    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center text-white">
       <PiCheckBold className="text-xl text-[#FFD700]" />
       Design
     </p>
   </BoxReveal>
   <BoxReveal boxColor={"#fabc3f"} duration={0.5}>
-    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center text-white">
       <PiCheckBold className="text-xl text-[#FFD700]" />
       Development
     </p>
   </BoxReveal>
   <BoxReveal boxColor={"#fabc3f"} duration={0.5}>
-    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center text-white">
       <PiCheckBold className="text-xl text-[#FFD700]" />
       Marketing
     </p>
   </BoxReveal>
   <BoxReveal boxColor={"#fabc3f"} duration={0.5}>
-    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+    <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center text-white">
       <PiCheckBold className="text-xl text-[#FFD700]" />
       Strategy
     </p>
@@ -234,36 +245,37 @@ className="hover:text-[#FFD700]"
 </div>
 
 
-          <div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
-            <div className="md:w-2/5">
-              <h1 className="text-2xl font-medium text-gray-600 w-4/5">
-                Trusted by fast moving brands worldwide
-              </h1>
 
-              <div className="flex my-6 gap-x-5 w-full">
-                <div>
-                  <h1 className="text-yallow text-3xl md:text-5xl">
-                    <NumberTicker value={1000} /> 
-                    <span className="text-[#FFD700]">+</span>
-                    <p className="text-gray-500 text-sm md:text-md">
-                      Happy Clients
-                    </p>
-                  </h1>
-                </div>
+<div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
+  <div className="md:w-2/5">
+    <h1 className="text-2xl font-medium text-white w-4/5">
+      Trusted by fast moving brands worldwide
+    </h1>
 
-                <div className="w-px bg-gray-300 self-stretch"></div>
+    <div className="flex my-6 gap-x-5 w-full">
+      <div>
+        <h1 className="text-white text-3xl md:text-5xl">
+          <NumberTicker value={1000} className="text-white" /> 
+          <span className="text-[#FFD700]">+</span>
+          <p className="text-white text-sm md:text-md">
+            Happy Clients
+          </p>
+        </h1>
+      </div>
 
-                <div className="flex-1 min-w-0">
-                  <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
-                    <NumberTicker value={100} /> 
-                    <span className="text-[#FFD700]">+</span>
-                    <p className="text-gray-500 text-sm md:text-md">
-                      Projects Completed
-                    </p>
-                  </h1>
-                </div>
-              </div>
-            </div>
+      <div className="w-px bg-white self-stretch"></div> {/* لون الفاصل أبيض */}
+
+      <div className="flex-1 min-w-0">
+        <h1 className="text-white text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
+          <NumberTicker value={100} className="text-white" /> 
+          <span className="text-[#FFD700]">+</span>
+          <p className="text-white text-sm md:text-md">
+            Projects Completed
+          </p>
+        </h1>
+      </div>
+    </div>
+  </div>
 
             <section className="overflow-hidden mt-10 bg-gray-900 md:w-4/5">
               <InfiniteMovingLogos
@@ -290,7 +302,7 @@ className="hover:text-[#FFD700]"
         <h1>
           <WordPullUpDemo />
         </h1>
-        <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+        <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-white">
         All of our services are designed to help your business stand out 
         </p>
 
@@ -320,29 +332,30 @@ className="hover:text-[#FFD700]"
       </section>
 
       <Element name="process">
-        <main className="md:px-0 mx-6 md:mx-auto">
-        <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
-        Our{" "}
-            <span className="text-[#FFD700] flex gap-x-1 items-center">
-              {" "}
-              <Image
-                src={"/icons/squiggle.svg"}
-                width={10000}
-                height={10000}
-                className="w-6"
-                alt="image"
-              />
-              Creative
-              <Image
-                src={"/icons/star.svg"}
-                width={10000}
-                height={10000}
-                className="w-6 mb-8 "
-                alt="image"
-              />
-            </span>{" "}
-            Process
-          </h1>
+  <main className="md:px-0 mx-6 md:mx-auto">
+    <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center text-white">
+      Our{" "}
+      <span className="text-[#FFD700] flex gap-x-1 items-center">
+        {" "}
+        <Image
+          src={"/icons/squiggle.svg"}
+          width={10000}
+          height={10000}
+          className="w-6"
+          alt="image"
+        />
+        Creative
+        <Image
+          src={"/icons/star.svg"}
+          width={10000}
+          height={10000}
+          className="w-6 mb-8"
+          alt="image"
+        />
+      </span>{" "}
+      Process
+    </h1>
+
 
           <p className="text-center 
           py-4 md:w-1/2 mx-auto 
@@ -364,37 +377,6 @@ className="hover:text-[#FFD700]"
         </main>
       </Element>
 
-      <section>
-        <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0">
-          <Image
-            src={"/logo/Crossbar.png"}
-            width={10000}
-            height={10000}
-            className=" md:w-1/3 rounded-md bg-black"
-            alt="image"
-          />
-          <div className="flex flex-col gap-y-5 md:w-1/2">
-            <h1 className="text-lg md:text-2xl ">
-              &quot;We&apos;ve been working with Crossbar for over 2 years and
-              they&apos;ve been amazing to work with. They&apos;ve helped us
-              grow our club and we couldn&apos;t be happier with the
-              results. &quot;
-            </h1>
-            <div className="flex items-center gap-x-1">
-              <IconStarFilled className="text-4xl text-yellow-500" />
-              <IconStarFilled className="text-4xl text-yellow-500" />
-              <IconStarFilled className="text-4xl text-yellow-500" />
-              <IconStarFilled className="text-4xl text-yellow-500" />
-              <IconStarFilled className="text-4xl text-yellow-500" />
-            </div>
-
-            <span className="text-xl font-medium">
-              Jordan, Brisson <br />
-              CEO, Atlas Massage
-            </span>
-          </div>
-        </main>
-      </section>
 
       <Element name="guarentees">
         <ShootingStarsAndStarsBackgroundDemo />
